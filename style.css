@@ -2,15 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     width: 560px;
+    border: 1px solid black;
 }
 
 .gridElement{
     box-sizing: border-box;
     height: calc(var(--grid-height) * 1px);
     width: calc(var(--grid-width) * 1px);
-    border: 1px solid black;
+  
 }
 
 .hovered{
     background-color: gray;
+}
+
+.hovering{
+    background-color: aquamarine;
 }

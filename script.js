@@ -22,8 +22,12 @@ function createGrid(size){
         divs.forEach(div => {
          div.addEventListener('mouseover', function(e){
              e.target.classList.add('hovered');
+             e.target.classList.add('hovering');
             })
         })
+        divs.forEach(div => 
+            div.addEventListener('mouseout', e => 
+                e.target.classList.remove('hovering')));
 }
 
 
