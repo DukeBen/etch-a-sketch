@@ -1,4 +1,16 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #92A8D1;
+}
 .container{
+    display: flex;
+    flex-direction: column;
+    width:560px;
+}
+
+.grid-container{
     display: flex;
     flex-wrap: wrap;
     width: 560px;
@@ -7,6 +19,7 @@
 
 .gridElement{
     box-sizing: border-box;
+    background-color:white;
     height: calc(var(--grid-height) * 1px);
     width: calc(var(--grid-width) * 1px);
   
@@ -18,4 +31,9 @@
 
 .hovering{
     background-color: aquamarine;
+}
+
+.under-grid-container{
+    display: flex;
+    justify-content: space-evenly;
 }

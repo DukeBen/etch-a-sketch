@@ -1,4 +1,4 @@
-const container = document.querySelector('div.container');
+const container = document.querySelector('div.grid-container');
 const barVal = document.querySelector('#bar');
 barVal.addEventListener('mouseup', function(e){
     deleteGrid();
@@ -18,6 +18,8 @@ function createGrid(size){
     gridElement.style.setProperty('--grid-width', 560/size);
     container.appendChild(gridElement);
     }
+    let paragraph = document.querySelector('span');
+    paragraph.textContent = `   This is a ${size} x ${size} grid`;
     divs = document.querySelectorAll('div.gridElement');
         divs.forEach(div => {
          div.addEventListener('mouseover', function(e){
