@@ -1,11 +1,17 @@
+//Add Selectors
+let pickedColor = '#c70039';
 const container = document.querySelector('div.grid-container');
 const barVal = document.querySelector('#bar');
+const colour = document.querySelector('#pick');
+
+
 barVal.addEventListener('mouseup', function(e){
     deleteGrid();
     createGrid(e.target.value);
 });
 
-createGrid(16) //default grid
+createGrid(16)
+
 function createGrid(size){
     for(let i = 0; i < size * size; i++)
     {
@@ -23,14 +29,19 @@ function createGrid(size){
     divs = document.querySelectorAll('div.gridElement');
         divs.forEach(div => {
          div.addEventListener('mouseover', function(e){
-             e.target.classList.add('hovered');
+             e.target.style.backgroundColor = `${pickedColor}`;
              e.target.classList.add('hovering');
+             console.log(e.target);
             })
         })
         divs.forEach(div => 
             div.addEventListener('mouseout', e => 
                 e.target.classList.remove('hovering')));
 }
+colour.addEventListener('change', function(e){
+    console.log(e)
+    pickedColor = e.target.value;
+} )
 
 
 
@@ -39,7 +50,7 @@ clear.addEventListener('click', clearGrid);
 function clearGrid ()
 {
     divs = document.querySelectorAll('div.gridElement');
-    divs.forEach(div => div.classList.remove('hovered'));
+    divs.forEach(div => div.style.backgroundColor = 'white');
 }
 
 function deleteGrid()

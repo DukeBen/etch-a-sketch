@@ -25,15 +25,24 @@ body{
   
 }
 
-.hovered{
-    background-color: gray;
-}
-
 .hovering{
-    background-color: aquamarine;
+    border-color: aquamarine;
 }
 
 .under-grid-container{
     display: flex;
     justify-content: space-evenly;
+}
+
+.header_and_grid{
+    display:flex;
+    flex-direction: column;
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+    background-color: coral;
+    border-radius: 25px;
+    color: white;
 }
